@@ -1,0 +1,44 @@
+name: Generate Svelte Website
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Build the website
+        run: |
+          npm install
+          npm run build
+
+      - name: Commit documentation changes
+        run: |
+          git clone https://github.com/${{ github.repository }} --branch gh-pages --single-branch gh-pages
+          cp -r dist/* gh-pages/
+          cd gh-pages
+          touch .nojekyll
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update documentation" -a || true
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
