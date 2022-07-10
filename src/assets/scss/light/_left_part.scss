@@ -1,0 +1,81 @@
+.kyoto_all_wrap .leftpart {
+  width: 450px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding: 0px 100px;
+  background-color: #fff;
+  @media screen and (max-width: 1200px) {
+    box-shadow: 0 0 30px rgba(62, 68, 125, 0.08);
+  }
+}
+.kyoto_all_wrap .leftpart_inner {
+  width: 100%;
+  height: auto;
+}
+.kyoto_all_wrap .leftpart img {
+  max-width: 150px;
+}
+.kyoto_all_wrap .leftpart .menu {
+  padding: 40px 0px 50px 0px;
+  width: 100%;
+  float: left;
+}
+.kyoto_all_wrap .leftpart .menu {
+  margin: 0px;
+  list-style-type: none;
+}
+.kyoto_all_wrap .leftpart .menu a {
+  margin: 0px;
+  width: 100%;
+  float: left;
+  text-decoration: none;
+  color: #767676;
+  display: inline-block;
+  font-weight: 500;
+  font-family: "Montserrat";
+  transition: all 0.3s ease;
+  cursor: pointer;
+  .svg {
+    display: none;
+  }
+}
+.kyoto_all_wrap .leftpart .menu a:hover {
+  color: #000;
+  letter-spacing: 2px;
+}
+.kyoto_all_wrap .leftpart .menu a.active {
+  color: #000;
+  letter-spacing: 2px;
+}
+.kyoto_all_wrap .leftpart .panel_footer {
+  width: 100%;
+  float: left;
+}
+.kyoto_all_wrap .leftpart .panel_footer p {
+  font-size: 15px;
+  color: #999;
+  font-family: "Montserrat";
+  line-height: 25px;
+  font-style: italic;
+}
+.kyoto_all_wrap .leftpart .panel_footer a {
+  text-decoration: none;
+  color: #787878;
+  font-weight: 500;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.kyoto_all_wrap .leftpart .panel_footer a:hover {
+  color: #000;
+  letter-spacing: 2px;
+}

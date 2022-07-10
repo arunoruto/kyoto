@@ -1,0 +1,37 @@
+.kyoto_all_wrap .rightpart {
+  width: 100%;
+  min-height: 100vh;
+  float: left;
+  position: relative;
+  background-color: #f8f8f8;
+  padding-left: 450px;
+}
+.kyoto_all_wrap .rightpart_in {
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: both;
+  border-left: 1px solid #ebebeb;
+  min-height: 100vh;
+}
+.kyoto_section {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin-left: 450px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 99;
+  @media screen and (max-width: 1199px) {
+    z-index: 1;
+  }
+}
+.kyoto_section .react-tabs__tab-panel {
+  transform: translate3d(10%, 0, 0);
+  transition: transform 0.5s ease;
+}
+.kyoto_section .react-tabs__tab-panel--selected {
+  transform: translate3d(0, 0, 0);
+}

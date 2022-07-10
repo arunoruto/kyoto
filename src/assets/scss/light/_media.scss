@@ -1,0 +1,214 @@
+@media (max-width: 1600px) {
+  .kyoto_all_wrap .leftpart {
+    width: 400px;
+  }
+  .kyoto_section {
+    margin-left: 400px;
+  }
+  .kyoto_all_wrap .rightpart {
+    padding-left: 400px;
+  }
+}
+@media (max-width: 1200px) {
+  .kyoto_mobile_menu {
+    display: block;
+  }
+  .kyoto_section {
+    margin-left: 0px;
+  }
+  .kyoto_all_wrap .leftpart {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0 10px 40px 0 rgba(12, 68, 25, 0.1);
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    @media screen and (max-width: 420px) {
+      padding: 20px 15px;
+    }
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner .navbar-brand img {
+    max-width: 100px;
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner .panel_footer {
+    display: none;
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner .menu {
+    padding: 0;
+    width: auto;
+    float: none;
+    display: inline-flex;
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner .menu ul {
+    display: flex;
+    align-items: center;
+  }
+  .kyoto_all_wrap .leftpart .leftpart_inner .menu a {
+    .svg {
+      display: block;
+      font-size: 1rem;
+    }
+    .menu_content {
+      display: none;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &.react-tabs__tab--selected {
+      filter: invert(0.4);
+    }
+  }
+  .kyoto_all_wrap .rightpart {
+    padding-left: 0px;
+  }
+  .kyoto_all_wrap .rightpart_in {
+    border-left: none;
+  }
+
+  .kyoto_about,
+  .kyoto_home,
+  .kyoto_portfolio,
+  .kyoto_contact,
+  .kyoto_news {
+    padding-top: 170px;
+  }
+  .kyoto_home {
+    padding-bottom: 120px;
+  }
+  .kyoto_modalbox_about .close a {
+    color: #000;
+  }
+  .kyoto_modalbox_about .close {
+    left: auto;
+    right: 5px;
+    top: 25px;
+  }
+  .close .svg {
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+  }
+
+  .not-found-wrapper .kyoto_error {
+    height: calc(100vh + 70px);
+  }
+}
+@media (max-width: 1040px) {
+  .mouse-cursor {
+    display: none;
+  }
+  .kyoto_mobile_menu .menu_inner {
+    padding: 20px;
+  }
+  .kyoto_home .home_content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .kyoto_home .avatar {
+    margin-bottom: 30px;
+  }
+  .kyoto_home .details {
+    margin-left: 0px;
+  }
+  .kyoto_about .description_inner {
+    flex-direction: column;
+  }
+  .kyoto_about .description .left {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+  .kyoto_about .description .right {
+    width: 100%;
+    padding: 0px;
+  }
+  .kyoto_title .title_flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .kyoto_title .portfolio_filter {
+    padding-top: 48px;
+  }
+  .kyoto_modalbox_news .description_wrap {
+    padding: 40px 25px;
+  }
+  .kyoto_modalbox_about .description_wrap {
+    padding: 90px 25px 60px;
+  }
+  .kyoto_modalbox_about .my_box {
+    flex-direction: column;
+  }
+  .kyoto_modalbox_about .my_box .left {
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+  .kyoto_modalbox_about .my_box .right {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .container {
+    padding: 0px 20px;
+  }
+  .kyoto_title {
+    margin-bottom: 20px;
+  }
+  .kyoto_all_wrap .leftpart img {
+    max-width: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .kyoto_home .details .name {
+    font-size: 35px;
+  }
+  .kyoto_home .avatar {
+    min-width: 200px;
+    min-height: 200px;
+  }
+  .kyoto_portfolio .portfolio_list {
+    margin: 0px;
+  }
+  .kyoto_portfolio .portfolio_list li {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .kyoto_news ul {
+    margin: 0px;
+  }
+  .kyoto_news ul li {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .kyoto_modalbox_about .description_wrap {
+    padding: 60px 25px 30px;
+  }
+  .kyoto_modalbox_news .main_content .icon {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .kyoto_modalbox_news .main_content .quotebox {
+    padding-left: 0px;
+  }
+  .kyoto_modalbox_about .counter ul {
+    margin: 0px;
+  }
+  .kyoto_modalbox_about .counter ul li {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .cool-lightbox-toolbar {
+    top: 72px;
+  }
+}
