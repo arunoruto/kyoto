@@ -6,7 +6,7 @@
   <h1>This project is still under development!</h1>
 
   <p>
-    The project is inspired by the <a href="http://tokyovue.ibthemespro.com/home-light">tokyo portoflio website</a> 
+    The project is inspired by the <a href="http://tokyovue.ibthemespro.com/home-light">tokyo portfolio website</a> 
     designed by <a href="https://themeforest.net/user/ib-themes">ib-themes</a>. On <a href="https://themeforest.net/">themeforest</a> 
     there are other implementations of this theme.
   </p>

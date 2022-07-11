@@ -10,7 +10,7 @@
   <div class="home_content">
     <div class="avatar">
       <div
-        class="image avatar_img"
+        class="image avatar_img blob"
         style="background-image: url({profile_image});"
       ></div>
     </div>
@@ -26,9 +26,12 @@
 </div>
 
 <style lang="scss">
+  h3 {
+    font-family: 'Roboto';
+  }
 
-.avatar_img {
-  aspect-ratio: 1;
-  background-position: 0% 20%;
-}
+  .avatar_img {
+    aspect-ratio: 1;
+    background-position: 0% 20%;
+  }
 </style>
