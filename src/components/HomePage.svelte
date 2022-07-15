@@ -16,7 +16,7 @@
     </div>
     <!-- End .avatar -->
     <div class="details">
-      <h3 class="name">{ name }</h3>
+      <h3 class="name"><span>{ name }</span></h3>
       <p class="job">{ label }</p>
 
       <SocialRow list={basics.profiles}/>
@@ -26,9 +26,23 @@
 </div>
 
 <style lang="scss">
+  @font-face{
+    font-family: 'Dot Digital-7';
+    src: url('../assets/fonts/dot_digital-7.ttf') format('truetype');
+  }
+
   h3 {
     font-family: 'Roboto';
+    &.name > span {
+      font-family: 'Dot Digital-7';
+      font-size: 5rem;
+    }
   }
+
+  // .name span {
+  //   font-family: 'Dot Digital-7';
+  //   font-size: 10px;
+  // }
 
   .avatar_img {
     aspect-ratio: 1;

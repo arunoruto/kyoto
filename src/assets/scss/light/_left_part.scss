@@ -44,11 +44,35 @@
     display: none;
   }
 }
+.kyoto_all_wrap .leftpart .menu button {
+  margin: 0px;
+  width: 100%;
+  float: left;
+  text-decoration: none;
+  color: #767676;
+  display: inline-block;
+  font-weight: 500;
+  font-family: "Roboto";
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  .svg {
+    display: none;
+  }
+}
 .kyoto_all_wrap .leftpart .menu a:hover {
   color: #000;
   letter-spacing: 2px;
 }
+.kyoto_all_wrap .leftpart .menu button:hover {
+  color: #000;
+  letter-spacing: 2px;
+}
 .kyoto_all_wrap .leftpart .menu a.active {
+  color: #000;
+  letter-spacing: 2px;
+}
+.kyoto_all_wrap .leftpart .menu button.active {
   color: #000;
   letter-spacing: 2px;
 }

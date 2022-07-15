@@ -9,6 +9,7 @@
   });
 
   let activetab = 1;
+  let show_credits = false;
 
   function change_active_tab(new_tab) {
     activetab = new_tab;
@@ -27,46 +28,21 @@
       </div> -->
 
       <div class="menu">
-        <a on:click={() => change_active_tab(1)} class={activetab === 1 ? 'active' : '' }>
-          <!-- <font-awesome-icon class="svg" icon="fa-solid fa-house" /> -->
+
+        <button on:click={() => change_active_tab(1)} class={activetab === 1 ? 'active' : '' }>
           <i class="fa-solid fa-house svg"></i>
           <span class="menu_content">Home</span>
-        </a>
+        </button>
 
-        <!-- <a v-on:click="activetab = 2" :class="[activetab === 2 ? 'active' : '']">
-          <font-awesome-icon class="svg" icon="fa-solid fa-user" />
-          <span class="menu_content">About</span>
-        </a>
-
-        <a v-on:click="activetab = 3" :class="[activetab === 3 ? 'active' : '']">
-          <font-awesome-icon class="svg" icon="fa-solid fa-briefcase" />
-          <span class="menu_content">Experience</span>
-        </a> -->
-
-        <!-- <a v-on:click="activetab = 3" :class="[activetab === 3 ? 'active' : '']">
-          <font-awesome-icon class="svg" icon="fa-solid fa-briefcase" />
-          <span class="menu_content">Portfolio</span>
-        </a> -->
-        
-        <!-- <a v-on:click="activetab = 4" :class="[activetab === 4 ? 'active' : '']">
-          <font-awesome-icon class="svg" icon="fa-solid fa-scroll" />
-          <span class="menu_content">News</span>
-        </a> -->
-        
-        <!-- <a v-on:click="activetab = 5" :class="[activetab === 5 ? 'active' : '']">
-          <font-awesome-icon class="svg" icon="fa-solid fa-envelope" />
-          <span class="menu_content"> Contact</span>
-        </a> -->
-
-        <a on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
+        <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
           <i class="fa-solid fa-copyright svg"></i>
-          <span class="menu_content">Credits</span>
-        </a>
+          <span class="menu_content {activetab === 2 ? 'active' : '' }">Credits</span>
+        </button>
         
       </div>
       <div class="panel_footer">
-        <p>
-          &copy; { new Date().getFullYear() } Mirza Arnaut
+        <p on:click="{() => show_credits = !show_credits}">
+          <a href="https://github.com/SoulEater45/kyoto">&copy; { new Date().getFullYear() } Kyoto</a>
         </p>
       </div>
       <!-- End panel footer -->
@@ -125,6 +101,15 @@
   //   color: #2c3e50;
   //   margin-top: 60px;
   // }
+
+  button {
+    height: 30px;
+
+    span {
+      font-size: 1rem;
+      // height: 18px;
+    }
+  }
   
   .leftpart::before {
     content: '';

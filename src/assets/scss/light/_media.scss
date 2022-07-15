@@ -69,6 +69,21 @@
       filter: invert(0.4);
     }
   }
+  .kyoto_all_wrap .leftpart .leftpart_inner .menu button {
+    .svg {
+      display: block;
+      font-size: 1rem;
+    }
+    .menu_content {
+      display: none;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &.react-tabs__tab--selected {
+      filter: invert(0.4);
+    }
+  }
   .kyoto_all_wrap .rightpart {
     padding-left: 0px;
   }
