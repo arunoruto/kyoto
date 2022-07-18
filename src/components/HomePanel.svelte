@@ -1,6 +1,7 @@
 <script>
   import HomePage from './HomePage.svelte';
   import Credits from './Credits.svelte';
+  import Modal,{getModal} from './Modal.svelte'
 
   let url = 'https://gist.githubusercontent.com/SoulEater45/9d8bdf6e325077cff45b79e5f574e6e3/raw/resume.json';
   const promise = fetch(url).then(response => response.json(), error => {
@@ -15,6 +16,12 @@
     activetab = new_tab;
     console.log(activetab)
   }
+
+  let name = 'mirza'
+  let selection	
+	function setSelection(res){
+		selection=res
+	}
 </script>
 
 <div>
@@ -34,16 +41,25 @@
           <span class="menu_content">Home</span>
         </button>
 
-        <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
+        <!-- <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
           <i class="fa-solid fa-copyright svg"></i>
           <span class="menu_content {activetab === 2 ? 'active' : '' }">Credits</span>
-        </button>
+        </button> -->
         
       </div>
-      <div class="panel_footer">
+      <!-- <div class="panel_footer">
         <p on:click="{() => show_credits = !show_credits}">
           <a href="https://github.com/SoulEater45/kyoto">&copy; { new Date().getFullYear() } Kyoto</a>
         </p>
+      </div> -->
+      <div class="panel_footer">
+        <button on:click="{()=>getModal().open()}">
+          <!-- <a href="https://github.com/SoulEater45/kyoto">&copy; { new Date().getFullYear() } Kyoto</a> -->
+          <p>&copy; { new Date().getFullYear() } Kyoto</p>
+        </button>
+        <Modal>
+          <Credits/>
+        </Modal>
       </div>
       <!-- End panel footer -->
     </div>
