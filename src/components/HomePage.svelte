@@ -33,10 +33,10 @@
 
   h3 {
     font-family: 'Roboto';
-    &.name > span {
-      font-family: 'Dot Digital-7';
-      font-size: 5rem;
-    }
+    // &.name > span {
+    //   font-family: 'Dot Digital-7';
+    //   font-size: 5rem;
+    // }
   }
 
   // .name span {

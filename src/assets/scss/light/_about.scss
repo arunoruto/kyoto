@@ -1,0 +1,300 @@
+.kyoto_about {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  padding: 100px 0px 100px 0px;
+}
+.kyoto_about .about_image {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  margin-bottom: 48px;
+}
+.kyoto_about .about_image img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+}
+.kyoto_about .description {
+  width: 100%;
+  height: auto;
+  clear: both;
+}
+.kyoto_about .description_inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.kyoto_about .description .left {
+  width: 55%;
+  padding-right: 50px;
+}
+.kyoto_about .description .left p {
+  margin-bottom: 35px;
+  font-style: italic;
+}
+.kyoto_about .description .name {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 26px;
+}
+.kyoto_about .description .right {
+  width: 45%;
+  padding-left: 50px;
+}
+.kyoto_about .description .right > ul {
+  margin: 0px;
+  list-style-type: none;
+}
+.kyoto_about .description .right > ul > li {
+  margin: 0px;
+  width: 100%;
+  float: left;
+}
+.kyoto_about .description .right > ul > li span {
+  min-width: 90px;
+  display: inline-block;
+  font-weight: 700;
+  color: #000;
+}
+.kyoto_about .description .right > ul > li a {
+  text-decoration: none;
+  color: #787878;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.kyoto_about .description .right > ul > li a:hover {
+  color: #000;
+  letter-spacing: 2px;
+}
+.kyoto_button {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.kyoto_button a,
+.ib-button {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background-color: #000;
+  padding: 9px 40px 14px 40px;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ib-button {
+  font-size: 15px;
+  line-height: 15px;
+  padding: 19px 40px;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+.kyoto_button a:hover,
+.ib-button:hover {
+  letter-spacing: 2px;
+}
+
+.close .svg {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 45px;
+  height: 45px;
+  filter: invert(1);
+  cursor: pointer;
+  @media (max-width: 1200px) {
+    position: absolute;
+    filter: invert(0);
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.kyoto_modalbox_about .description_wrap {
+  position: relative;
+  padding: 110px 70px 70px;
+  overflow: auto;
+}
+.kyoto_modalbox_about .my_box {
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: flex;
+  margin-bottom: 92px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+.kyoto_modalbox_about .my_box .left {
+  width: 50%;
+  padding-right: 50px;
+}
+.kyoto_modalbox_about .about_title h3 {
+  font-weight: 700;
+  color: #000;
+  font-size: 20px;
+}
+
+.progress_inner {
+  width: 100%;
+  margin-bottom: 17px;
+}
+.progress_inner:last-child {
+  margin-bottom: 0px;
+}
+.progress_inner > span {
+  margin: 0px 0px 5px 0px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #000;
+  font-style: italic;
+}
+.progress_inner span.number {
+  float: right;
+}
+.progress_inner .background {
+  background: rgba(0, 0, 0, 0.09);
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  height: 3px;
+}
+.progress_inner .background .bar_in {
+  height: 100%;
+  background: #000;
+  width: 0px;
+  overflow: hidden;
+}
+.progress_inner .background .bar {
+  width: 100%;
+  height: 100%;
+}
+.progress_inner .background .bar.open {
+  -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Safari 4+ */
+  -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Fx 5+ */
+  animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* IE 10+ */
+  width: 100%;
+}
+
+@-webkit-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.kyoto_modalbox_about .my_box .right {
+  width: 50%;
+  padding-left: 50px;
+}
+.kyoto_modalbox_about .counter {
+  width: 100%;
+  float: left;
+  clear: both;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+.kyoto_modalbox_about .counter ul {
+  margin: 0px 0px 42px -30px;
+  list-style-type: none;
+  padding-top: 45px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.kyoto_modalbox_about .counter ul li {
+  margin: 0px 0px 50px 0px;
+  width: 33.3333%;
+  float: left;
+  padding-left: 30px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+.kyoto_modalbox_about .list_inner {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
+}
+.kyoto_modalbox_about .counter ul li h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.kyoto_modalbox_about .counter ul li span {
+  font-style: italic;
+}
+.kyoto_modalbox_about .partners {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.kyoto_modalbox_about .partners {
+  .hooper-list ul {
+    margin-top: 20px;
+    li {
+      padding: 5px;
+      img {
+        background-color: #efefef;
+      }
+    }
+  }
+}
+.kyoto_modalbox_about .partners ul {
+  margin: 0px;
+  list-style-type: none;
+  padding-top: 15px;
+}
+.kyoto_modalbox_about .partners ul {
+  .slick-initialized .slick-slide {
+    padding: 5px;
+  }
+}
+.kyoto_modalbox_about .partners ul li {
+  margin: 0px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.kyoto_modalbox_about .partners ul li:hover {
+  opacity: 1;
+}

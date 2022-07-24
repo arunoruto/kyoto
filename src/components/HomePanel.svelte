@@ -1,5 +1,7 @@
 <script>
   import HomePage from './HomePage.svelte';
+  import About from './About.svelte';
+  import Experience from './Experience.svelte';
   import Credits from './Credits.svelte';
   import Modal,{getModal} from './Modal.svelte'
 
@@ -14,7 +16,6 @@
 
   function change_active_tab(new_tab) {
     activetab = new_tab;
-    console.log(activetab)
   }
 
   let name = 'mirza'
@@ -41,10 +42,20 @@
           <span class="menu_content">Home</span>
         </button>
 
-        <!-- <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
-          <i class="fa-solid fa-copyright svg"></i>
-          <span class="menu_content {activetab === 2 ? 'active' : '' }">Credits</span>
+        <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
+          <i class="fa-solid fa-house svg"></i>
+          <span class="menu_content">About</span>
+        </button>
+
+        <!-- <button on:click={() => change_active_tab(3)} class={activetab === 3 ? 'active' : '' }>
+          <i class="fa-solid fa-house svg"></i>
+          <span class="menu_content">Research</span>
         </button> -->
+
+        <button on:click={() => change_active_tab(4)} class={activetab === 4 ? 'active' : '' }>
+          <i class="fa-solid fa-house svg"></i>
+          <span class="menu_content">Experience</span>
+        </button>
         
       </div>
       <!-- <div class="panel_footer">
@@ -55,6 +66,7 @@
       <div class="panel_footer">
         <button on:click="{()=>getModal().open()}">
           <!-- <a href="https://github.com/SoulEater45/kyoto">&copy; { new Date().getFullYear() } Kyoto</a> -->
+          <!-- <i class="fa-solid fa-copyright svg"></i> -->
           <p>&copy; { new Date().getFullYear() } Kyoto</p>
         </button>
         <Modal>
@@ -76,15 +88,21 @@
           <div class="tabcontent">
             <HomePage basics={resume.basics}/>
           </div>
-          {/if}
+
+          {:else if activetab === 2}
+          <div class="tabcontent">
+            <About basics={resume.basics} />
+          </div>
 
           <!-- <div v-if="activetab === 2" class="tabcontent">
             <AboutPage v-if="resume" :basics="resume.basics"/>
-          </div>
-          
-          <div v-if="activetab === 3" class="tabcontent">
-            <ExperiencePage v-if="resume" :education="resume.education" :work="resume.work" />
           </div> -->
+        
+          {:else if activetab === 4}
+          <div class="tabcontent">
+            <Experience education={resume.education} work={resume.work} />
+          </div>
+
           
           <!-- <div v-if="activetab === 4" class="tabcontent">
             <News />
@@ -95,10 +113,11 @@
           </div> -->
           <!-- End Contact tabcontent -->
 
-          {#if activetab === 2}
+          <!-- {#if activetab === 2}
           <div class="tabcontent">
             <Credits/>
           </div>
+          {/if} -->
           {/if}
         </div>
         {/await}
