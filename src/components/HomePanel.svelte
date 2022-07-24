@@ -43,7 +43,7 @@
         </button>
 
         <button on:click={() => change_active_tab(2)} class={activetab === 2 ? 'active' : '' }>
-          <i class="fa-solid fa-house svg"></i>
+          <i class="fa-solid fa-user svg"></i>
           <span class="menu_content">About</span>
         </button>
 
@@ -53,7 +53,7 @@
         </button> -->
 
         <button on:click={() => change_active_tab(4)} class={activetab === 4 ? 'active' : '' }>
-          <i class="fa-solid fa-house svg"></i>
+          <i class="fa-solid fa-building-columns svg"></i>
           <span class="menu_content">Experience</span>
         </button>
         
