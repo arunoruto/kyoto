@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import autoPreprocess from 'svelte-preprocess';
 
-const BASE_URL = process.env.BASE_URL || '';
+let BASE_URL = process.env.BASE_URL || '';
 if (BASE_URL != '') {
   BASE_URL = `/${BASE_URL}/`
 }
