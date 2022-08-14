@@ -12,6 +12,6 @@ export default defineConfig({
   plugins: [svelte({
     preprocess: autoPreprocess()
   })],
-  base: BASE_URL + `/'
+  base: BASE_URL + '/'
   //base: `${BASE_URL}/`
 })
