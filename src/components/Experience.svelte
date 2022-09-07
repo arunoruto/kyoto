@@ -9,10 +9,11 @@
 
 <div class="resume">
   <div class="work">
-    <p>
+    <h3>
       <i class="fa-solid fa-briefcase"></i>
       <span>Work</span>
-    </p>
+    </h3>
+    <br>
     <div class="resume-container">
       {#each work as item, i}
       <div class="item">
@@ -31,10 +32,11 @@
     </div>
   </div>
   <div class="education">
-    <p>
+    <h3>
       <i class="fa-solid fa-graduation-cap"></i>
       <span>Education</span>
-    </p>
+    </h3>
+    <br>
     <div class="resume-container">
       {#each education as item, i}
       <div class="item">
@@ -169,5 +171,11 @@
 //   color: #7c7c7c;
 //   font-family: 'Source Sans Pro',sans-serif;
 // }
+
+@media(max-width: 767px) {
+  .resume {
+    flex-direction: column;
+  }
+}
 
 </style>

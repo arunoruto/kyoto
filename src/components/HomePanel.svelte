@@ -2,6 +2,7 @@
   import HomePage from './HomePage.svelte';
   import About from './About.svelte';
   import Experience from './Experience.svelte';
+  import Research from './Research.svelte';
   import Credits from './Credits.svelte';
   import Modal,{getModal} from './Modal.svelte'
 
@@ -56,6 +57,11 @@
           <i class="fa-solid fa-building-columns svg"></i>
           <span class="menu_content">Experience</span>
         </button>
+
+        <button on:click={() => change_active_tab(5)} class={activetab === 5 ? 'active' : '' }>
+          <i class="fa-solid fa-building-columns svg"></i>
+          <span class="menu_content">Research</span>
+        </button>
         
       </div>
       <!-- <div class="panel_footer">
@@ -67,6 +73,7 @@
         <button on:click="{()=>getModal().open()}">
           <!-- <a href="https://github.com/SoulEater45/kyoto">&copy; { new Date().getFullYear() } Kyoto</a> -->
           <!-- <i class="fa-solid fa-copyright svg"></i> -->
+          <p>Impressum</p>
           <p>&copy; { new Date().getFullYear() } Kyoto</p>
         </button>
         <Modal>
@@ -101,6 +108,11 @@
           {:else if activetab === 4}
           <div class="tabcontent">
             <Experience education={resume.education} work={resume.work} />
+          </div>
+
+          {:else if activetab === 5}
+          <div class="tabcontent">
+            <Research publications={resume.publications} projects={resume.projects} />
           </div>
 
           
@@ -144,6 +156,7 @@
       font-size: 1rem;
       // height: 18px;
     }
+    text-align: left;
   }
   
   .leftpart::before {
