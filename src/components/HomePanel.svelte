@@ -59,7 +59,7 @@
         </button>
 
         <button on:click={() => change_active_tab(5)} class={activetab === 5 ? 'active' : '' }>
-          <i class="fa-solid fa-building-columns svg"></i>
+          <i class="fa-solid fa-atom svg"></i>
           <span class="menu_content">Research</span>
         </button>
         
