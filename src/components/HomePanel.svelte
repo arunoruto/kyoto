@@ -168,6 +168,8 @@
     width: 100%;
     height: 100%;
     opacity: 0.2;
+    // box-shadow: inset 0 0 0 1000px rgba(var(--ctp-latte-base), .2);
+    background-color: var(--ctp-latte-base);
     background-image: url(http://www.christian-woehler.de/IC1318_20220628a.jpg);
     // background-image: url(http://www.christian-woehler.de/IC1318_20220628b.jpg);
     filter: invert(100%);

@@ -3,7 +3,8 @@
   min-height: 100vh;
   float: left;
   position: relative;
-  background-color: #f8f8f8;
+  // background-color: #f8f8f8;
+  background-color: var(--ctp-latte-base);
   padding-left: 450px;
 }
 .kyoto_all_wrap .rightpart_in {
