@@ -88,7 +88,7 @@
   <!-- Start rightpart -->
   <div class="rightpart">
     <div class="rightpart_in">
-      <div class="kyoto_section">
+      <div class="kyoto_section bg-ctp-base">
         {#await promise then resume}            
         <div class="container">
           {#if activetab === 1}
