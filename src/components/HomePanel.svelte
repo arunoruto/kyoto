@@ -1,10 +1,13 @@
 <script>
+  import {fade, fly} from 'svelte/transition';
+  // import '../app.postcss';
   import HomePage from './HomePage.svelte';
   import About from './About.svelte';
   import Experience from './Experience.svelte';
   import Research from './Research.svelte';
   import Credits from './Credits.svelte';
   import Modal,{getModal} from './Modal.svelte'
+  // import { fade } from 'svelte/types/runtime/transition';
 
   let url = 'https://gist.githubusercontent.com/SoulEater45/9d8bdf6e325077cff45b79e5f574e6e3/raw/resume.json';
   const promise = fetch(url).then(response => response.json(), error => {
@@ -24,6 +27,12 @@
 	function setSelection(res){
 		selection=res
 	}
+
+  let darkMode = false;
+  function toggle() {
+    darkMode = !darkMode;
+    window.document.body.classList.toggle('dark');
+  }
 </script>
 
 <div>
@@ -76,6 +85,11 @@
           <p>Impressum</p>
           <p>&copy; { new Date().getFullYear() } Kyoto</p>
         </button>
+        <br>
+        <br>
+        <button on:click={toggle}>
+          {darkMode ? 'Light' : 'Dark'} mode
+        </button>
         <Modal>
           <Credits/>
         </Modal>
@@ -88,16 +102,17 @@
   <!-- Start rightpart -->
   <div class="rightpart">
     <div class="rightpart_in">
-      <div class="kyoto_section bg-ctp-base">
+      <div class="kyoto_section">
         {#await promise then resume}            
         <div class="container">
           {#if activetab === 1}
-          <div class="tabcontent">
+          <!-- <div class="tabcontent" transition:fade> -->
+          <div class="tabcontent" in:fly="{{ x: 200, duration: 500, delay: 500}}" out:fly>
             <HomePage basics={resume.basics}/>
           </div>
 
           {:else if activetab === 2}
-          <div class="tabcontent">
+          <div class="tabcontent" in:fly="{{ x: 200, duration: 500, delay:500}}" out:fly>
             <About basics={resume.basics} />
           </div>
 
@@ -106,12 +121,12 @@
           </div> -->
         
           {:else if activetab === 4}
-          <div class="tabcontent">
+          <div class="tabcontent" in:fly="{{ x: 200, duration: 500, delay:500}}" out:fly>
             <Experience education={resume.education} work={resume.work} />
           </div>
 
           {:else if activetab === 5}
-          <div class="tabcontent">
+          <div class="tabcontent" in:fly="{{ x: 200, duration: 500, delay:500}}" out:fly>
             <Research publications={resume.publications} projects={resume.projects} />
           </div>
 
@@ -149,6 +164,18 @@
   //   margin-top: 60px;
   // }
 
+  .leftpart {
+    @apply bg-ctp-mantle;
+  }
+
+  .rightpart {
+    @apply bg-ctp-base;
+  }
+
+  .panel_footer {
+    @apply text-ctp-teal;
+  }
+
   button {
     height: 30px;
 
@@ -159,22 +186,22 @@
     text-align: left;
   }
   
-  .leftpart::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    // box-shadow: inset 0 0 0 1000px rgba(var(--ctp-latte-base), .2);
-    background-color: var(--ctp-latte-base);
-    background-image: url(http://www.christian-woehler.de/IC1318_20220628a.jpg);
-    // background-image: url(http://www.christian-woehler.de/IC1318_20220628b.jpg);
-    filter: invert(100%);
-    background-position: 50% 0;
-    background-size: cover;
-    z-index: -1;
-  }
+  // .leftpart::before {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: 0.2;
+  //   // box-shadow: inset 0 0 0 1000px rgba(var(--ctp-latte-base), .2);
+  //   background-color: var(--ctp-latte-base);
+  //   background-image: url(http://www.christian-woehler.de/IC1318_20220628a.jpg);
+  //   // background-image: url(http://www.christian-woehler.de/IC1318_20220628b.jpg);
+  //   filter: invert(100%);
+  //   background-position: 50% 0;
+  //   background-size: cover;
+  //   z-index: -1;
+  // }
   </style>

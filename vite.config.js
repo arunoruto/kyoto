@@ -7,7 +7,8 @@ const BASE_URL = process.env.BASE_URL ? `/${process.env.BASE_URL}/` : '';
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: true
+    host: true,
+    port: 3000,
   },
   plugins: [svelte({
     preprocess: autoPreprocess()

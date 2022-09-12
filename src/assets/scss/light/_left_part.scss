@@ -8,7 +8,7 @@
   align-items: center;
   z-index: 10;
   padding: 0px 100px;
-  background-color: #fff;
+  // background-color: #fff;
   @media screen and (max-width: 1200px) {
     box-shadow: 0 0 30px rgba(62, 68, 125, 0.08);
   }
@@ -29,28 +29,28 @@
   margin: 0px;
   list-style-type: none;
 }
-.kyoto_all_wrap .leftpart .menu a {
-  margin: 0px;
-  width: 100%;
-  float: left;
-  text-decoration: none;
-  color: #767676;
-  display: inline-block;
-  font-weight: 500;
-  font-family: "Roboto";
-  transition: all 0.3s ease;
-  cursor: pointer;
-  .svg {
-    display: none;
-  }
-}
+// .kyoto_all_wrap .leftpart .menu a {
+//   margin: 0px;
+//   width: 100%;
+//   float: left;
+//   text-decoration: none;
+//   color: #767676;
+//   display: inline-block;
+//   font-weight: 500;
+//   font-family: "Roboto";
+//   transition: all 0.3s ease;
+//   cursor: pointer;
+//   .svg {
+//     display: none;
+//   }
+// }
 .kyoto_all_wrap .leftpart .menu button {
   margin: 0px;
   width: 100%;
   float: left;
   text-decoration: none;
-  color: #767676;
-  display: inline-block;
+  // color: #767676;
+  // display: inline-block;
   font-weight: 500;
   font-family: "Roboto";
   text-align: left;
@@ -60,29 +60,23 @@
     display: none;
   }
 }
-.kyoto_all_wrap .leftpart .menu a:hover {
-  color: #000;
-  letter-spacing: 2px;
-}
 .kyoto_all_wrap .leftpart .menu button:hover {
-  color: #000;
-  letter-spacing: 2px;
-}
-.kyoto_all_wrap .leftpart .menu a.active {
-  color: #000;
+  // color: #000;
+  @apply text-ctp-teal;
   letter-spacing: 2px;
 }
 .kyoto_all_wrap .leftpart .menu button.active {
   color: #000;
+  @apply text-ctp-text;
   letter-spacing: 2px;
 }
 .kyoto_all_wrap .leftpart .panel_footer {
+  @apply text-ctp-subtext0;
   width: 100%;
   float: left;
 
   p {
     font-size: 15px;
-    color: #999;
     font-family: "Roboto";
     line-height: 25px;
     font-style: italic;

@@ -1,4 +1,4 @@
-import "./app.postcss";
+// import "./app.postcss";
 import "./assets/scss/style.scss";
 // import '@fortawesome/fontawesome-free/css/svg-with-js.css'
 // import '@fortawesome/fontawesome-free/css/brands.css'

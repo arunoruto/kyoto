@@ -1,8 +1,9 @@
 <script>
+  import './app.postcss'
   import HomePanel from './components/HomePanel.svelte'
 </script>
 
-<main>
+<main class="dark:ctp-frappe">
   <div id="app" class="kyoto_all_wrap">
     <HomePanel/>
   </div>

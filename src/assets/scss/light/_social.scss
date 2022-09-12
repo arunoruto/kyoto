@@ -5,28 +5,28 @@
 .social {
   margin: 0px;
   list-style-type: none;
-}
-.social li {
-  margin: 0px 15px 0px 0px;
-  display: inline-block;
-}
-.social li:last-child {
-  margin-right: 0px;
-}
-.social li a {
-  text-decoration: none;
-  color: #000;
 
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.social li a:hover {
-  filter: opacity(0.7);
-}
-.social li .svg {
-  width: 20px;
-  height: 20px;
+  li {
+    margin: 0px 15px 0px 0px;
+    display: inline-block;
+  
+    a {
+      text-decoration: none;
+      color: #000;
+    
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  
+      :hover {
+        filter: opacity(0.7);
+      }
+    }
+  
+    :last-child {
+      margin-right: 0px;
+    }
+  }
 }

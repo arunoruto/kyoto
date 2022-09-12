@@ -16,8 +16,8 @@
     </div>
     <!-- End .avatar -->
     <div class="details">
-      <h3 class="name"><span>{ name }</span></h3>
-      <p class="job">{ label }</p>
+      <h3 class="name text-ctp-text"><span>{ name }</span></h3>
+      <p class="job text-ctp-subtext1">{ label }</p>
 
       <SocialRow list={basics.profiles}/>
     </div>
