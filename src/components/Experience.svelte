@@ -21,12 +21,9 @@
           <i class="fa-solid fa-clock"></i>
           { resumeDate2String(item.startDate) } - { item.endDate ? resumeDate2String(item.endDate) : "present" }
         </p>
-        <br/>
-        { item.position }
-        <br/>
-        { item.name }
-        <br/>
-        { item.summary }
+        <p class="text-ctp-text">{ item.position }</p>
+        <p class="text-ctp-text">{ item.name }</p>
+        <p class="text-ctp-subtext0">{ item.summary }</p>
       </div>
       {/each}
     </div>
@@ -44,9 +41,8 @@
           <i class="fa-solid fa-clock"></i>
           { resumeDate2String(item.startDate) } - { item.endDate ? resumeDate2String(item.endDate) : "present" }
         </p>
-        { item.studyType } in { item.area }
-        <br/>
-        { item.institution }
+        <p class="text-ctp-text">{ item.studyType } in { item.area }</p>
+        <p class="text-ctp-subtext0">{ item.institution }</p>
       </div>
       {/each}
     </div>
@@ -93,13 +89,14 @@
 // }
 
 .resume-container > .item::after {
+  @apply text-ctp-teal;
+  @apply animate-pulse;
   content: "•";
   font-size: 2rem;
   position: absolute;
   left: -2rem;
-  // top: 2rem;
+  top: -0.8rem;
   // z-index: 11;
-  color: #aaa;
 }
 
 // .resume-container > .item::before {
@@ -171,6 +168,15 @@
 //   color: #7c7c7c;
 //   font-family: 'Source Sans Pro',sans-serif;
 // }
+
+.time-period {
+  @apply text-ctp-subtext0;
+}
+
+h3 {
+  @apply text-ctp-text;
+  font-size: 1.5rem;
+}
 
 @media(max-width: 767px) {
   .resume {

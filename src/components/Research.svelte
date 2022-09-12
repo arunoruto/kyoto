@@ -15,22 +15,19 @@
       Publications
     </h3>
     <br>
-    <div class="resume-container">
+    <ol type="1">
       {#each publications as item, i}
-      <div class="item">
+      <li class="">
         <a href={ item.url }> { item.name } </a>
+        <span class="text-ctp-subtext0">
+          ({ item.releaseDate ? resumeDate2String(item.releaseDate).slice(-4) : "" })
+          at { item.publisher }
+        </span>
         <br>
-        <p class="time-period">
-          <i class="fa-solid fa-clock"></i>
-          { item.releaseDate ? resumeDate2String(item.releaseDate) : "" }
-        </p>
-        <br/>
-        { item.publisher }
-        <br/>
-        { item.summary }
-      </div>
+        <q class="text-ctp-subtext0">{ item.summary }</q>
+      </li>
       {/each}
-    </div>
+    </ol>
   </div>
   <div class="projects">
     <h3>
@@ -39,46 +36,97 @@
       Projects
     </h3>
     <br>
-    <div class="resume-container">
+    <ul>
       {#each projects as item, i}
-      <div class="item">
+      <li class="item">
         <a href={ item.url }> { item.name } </a>
-        <br>
         <p class="time-period">
           <i class="fa-solid fa-clock"></i>
           { resumeDate2String(item.startDate) } - { item.endDate ? resumeDate2String(item.endDate) : "present" }
         </p>
-        { item.description }
-      </div>
+        <p>{ item.description }</p>
+      </li>
       {/each}
-    </div>
+    </ul>
   </div>
 </div>
 
 <style lang="scss">
 
-// .resume {
-//   // .resume-container {
-//   //   border-left: .1rem solid rgba(128,128,128,.25);
-//   //   padding-left: 2rem;
-//   // }
-//   padding: 100px 0 50px 0;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   align-items: stretch;
-//   column-gap: 10%;
-// }
+.research {
+  // .resume-container {
+  //   border-left: .1rem solid rgba(128,128,128,.25);
+  //   padding-left: 2rem;
+  // }
+  padding: 100px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  column-gap: 10%;
+}
 
 // // .resume-container {
 // //   border-left: .1rem solid rgba(128,128,128,.25);
 // //   padding-left: 1rem;
 // // }
 
-// .work, .education {
-//   width: 100%;
-//   flex-grow: 1;
+.publications, .projects {
+  width: 100%;
+  flex-grow: 1;
+}
+
+// ol {
+//   list-style-type: decimal;
 // }
+
+a {
+  @apply text-ctp-text;
+  @apply underline underline-offset-2;
+}
+
+h3 {
+  @apply text-ctp-text;
+}
+
+q {
+  quotes: "„" "“" "‘" "’";
+  font-style: italic;
+}
+
+ol {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+
+  // li {
+  //   display: block;
+  //   margin-bottom: .5em;
+  //   margin-left: 2em;
+
+  //   :before {
+  //     @apply text-ctp-teal;
+  //     display: inline-block;
+  //     content: "[" counter(item) "] ";
+  //     counter-increment: item;
+  //     width: 2em;
+  //     margin-left: -2em;
+  //   }
+  // }
+}
+ol > li {
+  display: block;
+  margin-bottom: .5rem;
+  margin-left: 2rem;
+}
+ol > li::before {
+  @apply text-ctp-teal;
+  display: inline-block;
+  content: "[" counter(item) "] ";
+  counter-increment: item;
+  width: 2em;
+  margin-left: -2em;
+}
 
 // // .resume-container > .item::after {
 // //   content: "";
@@ -180,8 +228,9 @@
 //   }
 // }
 
-.research > * > h3 {
+h3 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 </style>
