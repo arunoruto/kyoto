@@ -9,7 +9,7 @@
   import Modal,{getModal} from './Modal.svelte'
   // import { fade } from 'svelte/types/runtime/transition';
 
-  let url = 'https://gist.githubusercontent.com/SoulEater45/9d8bdf6e325077cff45b79e5f574e6e3/raw/resume.json';
+  let url = 'https://gist.githubusercontent.com/arunoruto/9d8bdf6e325077cff45b79e5f574e6e3/raw/resume.json';
   const promise = fetch(url).then(response => response.json(), error => {
     console.log("Something happened tho..")
     console.log(error)
